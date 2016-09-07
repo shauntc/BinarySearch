@@ -10,9 +10,21 @@
 
 @implementation BinaryTreeNode
 
+- (instancetype)initWithParent:(BinaryTreeNode *)parent
+{
+    self = [super init];
+    if (self) {
+        _number = nil;
+        _leftChild = nil;
+        _rightChild = nil;
+        _parent = parent;
+    }
+    return self;
+}
+
 -(BOOL)isLeftChildOfParent
 {
-    
+    return self.parent.number >= self.number;
 }
 
 

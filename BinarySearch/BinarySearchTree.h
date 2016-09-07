@@ -13,10 +13,10 @@
 
 @property (nonatomic, strong) BinaryTreeNode *root;
 
--(instancetype)initWithObject:(NSObject *)object;
--(void)insertObject:(NSObject *)newObject;
--(BinaryTreeNode *)find:(NSObject *)object;
--(BinaryTreeNode *)deleteObject:(NSObject *)object;
+-(instancetype)initWithNumber:(NSNumber *)number;
+-(void)insertNumber:(NSNumber *)newNumber;
+-(BinaryTreeNode *)find:(NSNumber *)number;
+-(BinaryTreeNode *)deleteNumber:(NSNumber *)number;
 
 
 

@@ -16,5 +16,7 @@
 @property (nonatomic, strong) BinaryTreeNode *parent;
 
 -(BOOL)isLeftChildOfParent;
+-(instancetype)initWithParent:(BinaryTreeNode *)parent;
+
 
 @end

@@ -10,7 +10,7 @@
 
 @interface BinaryTreeNode : NSObject
 
-@property (nonatomic, strong) NSObject *object;
+@property (nonatomic, strong) NSNumber *number;
 @property (nonatomic, strong) BinaryTreeNode *leftChild;
 @property (nonatomic, strong) BinaryTreeNode *rightChild;
 @property (nonatomic, strong) BinaryTreeNode *parent;

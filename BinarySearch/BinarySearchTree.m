@@ -10,37 +10,37 @@
 
 @implementation BinarySearchTree
 
--(instancetype)initWithObject:(NSObject *)object
+-(instancetype)initWithNumber:(NSNumber *)number
 {
     self = [super init];
     if (self) {
         _root = [[BinaryTreeNode alloc] init];
-        _root.object = object;
+        _root.number = number;
         
     }
     return self;
 }
 
--(void)insertObject:(NSObject *)newObject
+-(void)insertNumber:(NSObject *)newObject
 {
-    [self insertObject:newObject atNode:self.root];
+    [self insertNumber:newObject atNode:self.root];
 }
 
--(void) insertObject:(NSObject *)newObject atNode:(BinaryTreeNode *) node
+-(void) insertNumber:(NSNumber *)newNumber atNode:(BinaryTreeNode *) node
 {
-    if(node.object == nil)
+    if(node.number == nil)
     {
-        node.object = newObject;
+        node.number = newNumber;
     }
-    else if(newObject > node.object)
+    else if(newNumber > node.number)
     {
-        [self insertObject:newObject atNode:node.rightChild];
+        [self insertNumber:newNumber atNode:node.rightChild];
     }
-    else if(newObject < node.object)
+    else if(newNumber < node.number)
     {
-        [self insertObject:newObject atNode:node.leftChild];
+        [self insertNumber:newNumber atNode:node.leftChild];
     }
-    else if ([newObject isEqualTo:node.object])
+    else if ([newNumber isEqualTo:node.number])
     {
         //what do I do if they are equal
     }
@@ -48,12 +48,30 @@
 
 -(BinaryTreeNode *)find:(NSObject *)object
 {
+    return [self find:object atNode:self.root];
+}
+
+-(BinaryTreeNode *)find:(NSObject *)object atNode:(BinaryTreeNode *) node
+{
+    
+    
     
 }
 
 -(BinaryTreeNode *)deleteObject:(NSObject *)object
 {
+    BinaryTreeNode *node = [self findObject];
     
+    if([node.leftChild isEqual:nil] && [node.rightChild isEqual:nil])
+    {
+        if(node.isLeftChildOfParent)
+        {
+            node.parent.leftChild = nil;
+        }
+        
+    }
+    
+    return [self find:object];
 }
 
 

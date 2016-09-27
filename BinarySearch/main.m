@@ -19,6 +19,9 @@ int main(int argc, const char * argv[]) {
         [newTree insertNumber: [NSNumber numberWithInt:3]];
         [newTree insertNumber: [NSNumber numberWithInt:7]];
         [newTree insertNumber: [NSNumber numberWithInt:23]];
+        
+        [newTree insertNumber:[NSNumber numberWithInt:15]];
+        
 
         
         
